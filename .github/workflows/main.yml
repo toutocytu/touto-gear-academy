@@ -22,8 +22,18 @@ jobs:
         with:
           targets: wasm32-unknown-unknown
 
-      - name: Check and test
+      - name: Add
         run: |
           rustup component add rust-src --toolchain stable-x86_64-unknown-linux-gnu
+
+
+      - name: Wordle
+        run: |
+          cd wordle_program
+          cargo b
+
+      - name: Check and test
+        run: |
+          cd game_session
           cargo clippy --all-targets -- -D warnings -A unused-imports
           cargo test
