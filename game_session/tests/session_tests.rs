@@ -12,7 +12,7 @@ fn test_game_start_and_lose() {
     system.mint_to(USER, 1000000000000000000000);
     let session_program: Program = Program::from_file(
         &system,
-        "./wasm32-unknown-unknown/debug/game_session_program.opt.wasm",
+        "./wasm32-unknown-unknown/debug/game_session.opt.wasm",
     );
 
     let wordle_program: Program = Program::from_file(
@@ -62,7 +62,7 @@ fn test_game_timeout() {
     system.mint_to(USER, 1000000000000000000000);
     let session_program: Program = Program::from_file(
         &system,
-        "./wasm32-unknown-unknown/debug/game_session_program.opt.wasm",
+        "./wasm32-unknown-unknown/debug/game_session.opt.wasm",
     );
 
     let wordle_program: Program = Program::from_file(
@@ -106,7 +106,7 @@ fn test_game_win() {
     system.mint_to(USER, 1000000000000000000000);
     let session_program: Program = Program::from_file(
         &system,
-        "./wasm32-unknown-unknown/debug/game_session_program.opt.wasm",
+        "./wasm32-unknown-unknown/debug/game_session.opt.wasm",
     );
 
     let wordle_program: Program = Program::from_file(
